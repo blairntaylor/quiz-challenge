@@ -19,7 +19,7 @@ var questions = [{
 
 varcurrentQuestionsIndex = 0;
 
-// START FUNCTION hide the main div and show the question div and start timer
+// START FUNCTION will hide the main div and show the question div and start timer
 // GET QUESTION FUNCTION goes through arrays of the questions
 // GET QUESTION FUNCTION define current question, displays the question, makes all buttons answer
 // CHECK ANSWER FUNCTION checks if the answer is wrong and subtracts time, moves you to the next question index, checks if you are at the end of the array
