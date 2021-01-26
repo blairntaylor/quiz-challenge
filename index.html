@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed Coding Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="top">
+            <h6 class="timer" style="text-align:left;" ></h6>
+            <h6 class="score" style="text-align:right;" ></h6>
+        </div>
+        <br>
+
+        <div class="header">
+            <h1>Javascript Code Quiz Challenge</h1>
+            <hr>
+        </div>
+
+       <div class="content" style="align-items: center;">
+        
+
+            <div class="main">
+                <h3 class="intro" style="text-align: center;">Welcome to the Code Quiz. Attempt to answer these questions the fastest in 30 seconds to win!</h3>
+                <button class="start">Start</button>
+            </div>
+
+            <div class ="questions hidden">
+                <h2 id="display.Question"></h2>
+                <h4 id="display.Choices"></h4>
+            </div>
+
+            <div class ="results" hidden></div>
+       </div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
