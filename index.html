@@ -8,37 +8,61 @@
 </head>
 <body>
     <div class="container">
-
-        <div class="top">
-            <h6 class="timer" style="text-align:left;" ></h6>
-            <h6 class="score" style="text-align:right;" ></h6>
-        </div>
+        <section>
+            <!-- Timer shows seconds left-->
+            <h6 class="timer">Time is:</h6>
+            <!-- Score button to link to score-results div-->
+            <div class="score">
+                <div class="high-score">
+                <h6>View High Score</h6></div>
+            </div>
+        </section>
         <br>
 
+        <!-- Div with headline -->
         <div class="header">
             <h1>Javascript Code Quiz Challenge</h1>
             <hr>
         </div>
-
+        <!-- Content holds all the moving parts -->
        <div class="content" style="align-items: center;">
         
             <!-- Main div holds introduction -->
             <div class="main">
-                <h3 class="intro" style="text-align: center;">Welcome to the Code Quiz. Attempt to answer these questions the fastest in 30 seconds to win!</h3>
-                <button class="start">Start</button>
+                <h3 class="intro" style="text-align: center;">Welcome to the Code Quiz. Attempt to answer these questions the fastest in 30 seconds to win! If you get an answer wrong, you will lose 15 seconds.</h3>
+                <button class="start-button">Start</button>
             </div>
-            <!-- Quiz div holds the questions -->
-            <div class ="quiz">
-                <h2 id="display.Question"></h2>
-                <h4 id="display.Choices"></h4>
+
+            <!-- Quiz div holds the questions and answers -->
+            <div class ="quiz" hidden>
+                <h2 id="display-questions" ></h2>
+                <button id="answer1" data-value="0"></button>
+                <button id="answer2" data-value="1"></button>
+                <button id="answer3" data-value="2"></button>
+                <button id="answer4" data-value="3"></button>
             </div>
-            <!-- Results div holds the end results -->
-            <div class ="results" hidden></div>
+
+            <div class = "game-over" hidden>
+                <h2>Game Over!</h2>
+                <h4>Your final score is:</h4>
+                <h4>Enter your initials</h4>
+            </div>
+
+            <!-- Results div holds the score board -->
+            <div class ="score-results" hidden>
+                <h2>High Scores</h2>
+                <ol>
+                    <li class="user1"></li>
+                    <li class="user2"</li></li>
+                    <li class="user3"</li></li>
+                </ol>
+            </div>
+
        </div>
 
 
     </div>
     
-    <script src="script.js"></script>
+    <script src="script-quiz.js"></script>
 </body>
 </html>

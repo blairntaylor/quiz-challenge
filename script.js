@@ -1,6 +1,3 @@
-// Timed Coding Quiz
-// Content Javascript fundamentals
-
 //Questions, Choices and Answers
 var questions = [{
     question: "1. Commonly used data types DO NOT include",
@@ -17,7 +14,10 @@ var questions = [{
 },
 ]
 
-varcurrentQuestionsIndex = 0;
+// questions start at 0 index
+varcurrentQuestionsIndex = 0; 
+// timer starts at 30 seconds
+var secondsLeft = 30;
 
 // START FUNCTION will hide the main div and show the question div and start timer
 // GET QUESTION FUNCTION goes through arrays of the questions
@@ -31,7 +31,6 @@ varcurrentQuestionsIndex = 0;
 
 
 function startQuiz() {
-
 }
 
 function getQuestion() {
