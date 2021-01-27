@@ -45,11 +45,12 @@ questionSelect = [
 // click on start button to start time
 startButton.addEventListener("click", startTime);
 
-//function start quiz
+var container = document.querySelector(".container");
+// var box = document.querySelector(".box");
+
 
 // setting up the timer
 function startTime() {
-    quizSection.style.display="block";
     timer = setInterval(function() {
         secondsLeft--;
         timerEl.textContent = secondsLeft;
@@ -61,8 +62,9 @@ function startTime() {
 }
 
 
-function displayQuestions() {
-
+function getQuestions(){
+    questionSelect.textContent = question[i].title
+    answer1.textContent = question[i].choices[0]
 }
 // function displayQuestion
 //display question and choices
