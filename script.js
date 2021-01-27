@@ -1,6 +1,6 @@
 // calling data from the HTML
 var displayQuestions = document.getElementById("#display-questions");
-var timerEl = document.querySelector(".timer");
+var timerEl = document.querySelector("#time");
 var highScore = document.getElementById("#high-score");
 var viewScore = document.getElementById("#score-results");
 var startButton = document.getElementById("start-button");
@@ -33,20 +33,16 @@ questionSelect = [
 ];
 
 //clicking on answers and check if correct
-answer1.addEventListener("click", checkAnswer)
-answer2.addEventListener("click", checkAnswer)
-answer3.addEventListener("click", checkAnswer)
-answer4.addEventListener("click", checkAnswer)
+// answer1.addEventListener("click", checkAnswer)
+// answer2.addEventListener("click", checkAnswer)
+// answer3.addEventListener("click", checkAnswer)
+// answer4.addEventListener("click", checkAnswer)
 
 // save user info
-saveButton.addEventListener("click", saveUser)
+// saveButton.addEventListener("click", saveUser)
 
-// View time left
-// function setTimer() {
-//     timerEl.textContent = secondsLeft;
-// }
 
-// click on start button to show questions
+// click on start button to start time
 startButton.addEventListener("click", startTime);
 
 //function start quiz
@@ -60,13 +56,14 @@ function startTime() {
 
         if(secondsLeft === 0) {
             clearInterval(timer);
-            return 0;
         }
     }, 1000);
 }
 
-startTime();
 
+function displayQuestions() {
+
+}
 // function displayQuestion
 //display question and choices
 //ref the DOM
@@ -75,6 +72,10 @@ startTime();
 //loop thru the choices
 //display each choice on DOM
 
+
+function checkAnswer() {
+
+}
 // functionquestionClick
 //check correctanswer against user choice
 //if answer correct, show next question
