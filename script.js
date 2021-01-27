@@ -5,7 +5,7 @@ var highScore = document.getElementById("#high-score");
 var viewScore = document.getElementById("#score-results");
 var startButton = document.getElementById("start-button");
 var saveButton = document.getElementById("#save-button");
-var quizSection = document.querySelector(".quiz");
+var quizSection = document.getElementById("#quiz");
 var displayQuestions = document.getElementById("#display-questions");
 var answer1 = document.getElementById("#answer1");
 var answer2 = document.getElementById("#answer2");
@@ -61,10 +61,15 @@ function startTime() {
             clearInterval(timer);
         }
     }, 1000);
+
+    main.setAttribute("class", "hidden");
+    quizSection.removeAttribute("class");
+
+    startGame();
 }
 
 function startGame(){
-    displayQuestion.textContent = questionSelect [questionIndex].question
+    displayQuestions.textContent = questionSelect [questionIndex].question
     answer1.textContent = questionSelect [questionIndex].choice[0]
     answer2.textContent = questionSelect [questionIndex].choice[1]
     answer3.textContent = questionSelect [questionIndex].choice[2]
