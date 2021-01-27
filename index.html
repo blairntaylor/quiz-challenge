@@ -11,9 +11,9 @@
         <section>
             <!-- Timer shows seconds left-->
             <h6 class="timer">Time is:</h6>
-            <!-- Score button to link to score-results div-->
+            <!-- Click to view the high scores-->
             <div class="score">
-                <div class="high-score">
+                <div id="high-score">
                 <h6>View High Score</h6></div>
             </div>
         </section>
@@ -24,37 +24,40 @@
             <h1>Javascript Code Quiz Challenge</h1>
             <hr>
         </div>
-        <!-- Content holds all the moving parts -->
+
        <div class="content" style="align-items: center;">
         
-            <!-- Main div holds introduction -->
+            <!-- Main div holds introduction and start button -->
             <div class="main">
                 <h3 class="intro" style="text-align: center;">Welcome to the Code Quiz. Attempt to answer these questions the fastest in 30 seconds to win! If you get an answer wrong, you will lose 15 seconds.</h3>
-                <button class="start-button">Start</button>
+                <button id="start-button">Start</button>
             </div>
 
-            <!-- Quiz div holds the questions and answers -->
-            <div class ="quiz" hidden>
-                <h2 id="display-questions" ></h2>
+            <!-- Hidden quiz section holds the questions and answers -->
+            <div class= "quiz" hidden>
+                <h2 id="display-questions"></h2>
                 <button id="answer1" data-value="0"></button>
                 <button id="answer2" data-value="1"></button>
                 <button id="answer3" data-value="2"></button>
                 <button id="answer4" data-value="3"></button>
             </div>
 
-            <div class = "game-over" hidden>
+            <!-- Hidden game over and log user sscore  -->
+            <div id = "game-over" hidden>
                 <h2>Game Over!</h2>
                 <h4>Your final score is:</h4>
-                <h4>Enter your initials</h4>
+                <label for=""><h4>Enter your initials</h4></label>
+                <input type="text" name=""/>
+                <button id="save-button">Save</button>
             </div>
 
-            <!-- Results div holds the score board -->
-            <div class ="score-results" hidden>
-                <h2>High Scores</h2>
+            <!-- Hidden results div holds top scores -->
+            <div id ="score-results" hidden>
+                <h2>Top 3 High Scores</h2>
                 <ol>
-                    <li class="user1"></li>
-                    <li class="user2"</li></li>
-                    <li class="user3"</li></li>
+                    <li id="user1"></li>
+                    <li id="user2"</li></li>
+                    <li id="user3"</li></li>
                 </ol>
             </div>
 

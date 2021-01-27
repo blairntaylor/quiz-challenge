@@ -1,12 +1,24 @@
 // calling data from the HTML
-var displayQuestions = document.querySelector(".display-questions");
-var displayChoices = document.querySelector(".display-choices");
-var timer = document.querySelector(".timer");
-var highScore = document.querySelector(".high-score");
-var viewScore = document.querySelector(".score-results");
-var startButton = document.querySelector(".start-button");
+var displayQuestions = document.getElementById("#display-questions");
+var timerEl = document.querySelector(".timer");
+var highScore = document.getElementById("#high-score");
+var viewScore = document.getElementById("#score-results");
+var startButton = document.getElementById("start-button");
+var saveButton = document.getElementById("#save-button");
+var quizSection = document.querySelector(".quiz");
+var displayQuestions = document.getElementById("#display-questions");
+var answer1 = document.getElementById("#answer1");
+var answer2 = document.getElementById("#answer2");
+var answer3 = document.getElementById("#answer3");
+var answer4 = document.getElementById("#answer4");
+var gameOver = document.getElementById("#game-over");
+var scoreResults = document.getElementById("#score-results");
 
-var questionSelectIndex = 0;
+var questionIndex = 0;
+var secondsLeft = 30;
+var correct = 0;
+var incorrect = 0;
+
 //  array of questions
 questionSelect = [
     {"question": "1. Commonly used data types DO NOT include", 
@@ -20,53 +32,41 @@ questionSelect = [
     "answer": "quotes"}
 ];
 
-// questions start at 0 index
-varcurrentQuestionsIndex = 0; 
-// timer starts at 30 seconds
-var secondsLeft = 30;
+//clicking on answers and check if correct
+answer1.addEventListener("click", checkAnswer)
+answer2.addEventListener("click", checkAnswer)
+answer3.addEventListener("click", checkAnswer)
+answer4.addEventListener("click", checkAnswer)
 
-function setTimer() {
-    timerEl.textContent = secondsLeft;
-}
+// save user info
+saveButton.addEventListener("click", saveUser)
 
+// View time left
+// function setTimer() {
+//     timerEl.textContent = secondsLeft;
+// }
+
+// click on start button to show questions
+startButton.addEventListener("click", function(){
+    quizSection.style.display="block"
+})
+
+//function start quiz
 
 // setting up the timer
 function startTime() {
-    timerEl = setInterval(function() {
+    timer = setInterval(function() {
         secondsLeft--;
         timerEl.textContent = secondsLeft;
 
         if(secondsLeft === 0) {
-            clearInterval(timerEl);
-            sendMessage();
+            clearInterval(timer);
             return 0;
         }
     }, 1000);
 }
 
-// hit start button
-startButton.addEventListener ("click", startTime)
-
-
-// function startGame() {
-//     isWin = false;
-//     secondsLeft = 30;
-//     // Prevents start button from being clicked when round is in progress
-//     startButton.disabled = true;
-//     renderBlanks()
-//     startTimer()
-//   }
-
-
-
-
-// Event listener - click start button
-// ref startBtn on DOM
-// add onclick event
-
-// start timer
-// ref timerEl on DOM
-//use set interval
+startTime();
 
 // function displayQuestion
 //display question and choices
