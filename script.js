@@ -1,5 +1,5 @@
 // calling data from the HTML
-var displayQuestions = document.getElementById("#display-questions");
+var displayQuestion = document.getElementById("#display-questions");
 var timerEl = document.querySelector("#time");
 var highScore = document.getElementById("#high-score");
 var viewScore = document.getElementById("#score-results");
@@ -20,7 +20,7 @@ var correct = 0;
 var incorrect = 0;
 
 //  array of questions
-questionSelect = [
+var questionSelect = [
     {"question": "1. Commonly used data types DO NOT include", 
     "choices": ["boolean", "number", "string", "iPod"],
     "answer": "iPod"},
@@ -45,8 +45,10 @@ questionSelect = [
 // click on start button to start time
 startButton.addEventListener("click", startTime);
 
-var container = document.querySelector(".container");
-// var box = document.querySelector(".box");
+// startButton.addEventListener("click", startGame){
+//     quizSection.removeAttribute(“class”);
+//     quizSection.setAttribute = "block";
+// }
 
 
 // setting up the timer
@@ -61,11 +63,15 @@ function startTime() {
     }, 1000);
 }
 
+function startGame(){
+    displayQuestion.textContent = questionSelect [questionIndex].question
+    answer1.textContent = questionSelect [questionIndex].choice[0]
+    answer2.textContent = questionSelect [questionIndex].choice[1]
+    answer3.textContent = questionSelect [questionIndex].choice[2]
+    answer4.textContent = questionSelect [questionIndex].choice[3]
 
-function getQuestions(){
-    questionSelect.textContent = question[i].title
-    answer1.textContent = question[i].choices[0]
 }
+
 // function displayQuestion
 //display question and choices
 //ref the DOM
