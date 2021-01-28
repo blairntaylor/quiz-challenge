@@ -1,18 +1,18 @@
 // calling data from the HTML
-var displayQuestion = document.getElementById("#display-questions");
 var timerEl = document.querySelector("#time");
-var highScore = document.getElementById("#high-score");
-var viewScore = document.getElementById("#score-results");
+var highScore = document.getElementById("high-score");
+var viewScore = document.getElementById("score-results");
 var startButton = document.getElementById("start-button");
-var saveButton = document.getElementById("#save-button");
-var quizSection = document.getElementById("#quiz");
-var displayQuestions = document.getElementById("#display-questions");
-var answer1 = document.getElementById("#answer1");
-var answer2 = document.getElementById("#answer2");
-var answer3 = document.getElementById("#answer3");
-var answer4 = document.getElementById("#answer4");
-var gameOver = document.getElementById("#game-over");
-var scoreResults = document.getElementById("#score-results");
+var saveButton = document.getElementById("save-button");
+var quizSection = document.getElementById("quiz");
+var displayQuestions = document.getElementById("display-questions");
+var answer1 = document.getElementById("answer1");
+var answer2 = document.getElementById("answer2");
+var answer3 = document.getElementById("answer3");
+var answer4 = document.getElementById("answer4");
+var gameOver = document.getElementById("game-over");
+var scoreResults = document.getElementById("score-results");
+var main = document.getElementById("main");
 
 var questionIndex = 0;
 var secondsLeft = 30;
@@ -21,16 +21,21 @@ var incorrect = 0;
 
 //  array of questions
 var questionSelect = [
-    {"question": "1. Commonly used data types DO NOT include", 
-    "choices": ["boolean", "number", "string", "iPod"],
-    "answer": "iPod"},
-    {"question": "2. Arrays in Javascript can be used to store ________", 
-    "choices": ["socks", "values", "cheeses", "events"],
-    "answer": "values"},
-    {"question": "3. String values must be enclosed in within ______ when being assigned to variables",
-    "choices": ["two slices", "earmuffs", "quotes", "brackets"],
-    "answer": "quotes"}
-];
+    {
+    question: "1. Commonly used data types DO NOT include", 
+    choices: ["boolean", "number", "string", "iPod"],
+    answer: "iPod"
+},
+    {
+    question: "2. Arrays in Javascript can be used to store ________", 
+    choices: ["socks", "values", "cheeses", "events"],
+    answer: "values"
+},
+    {
+    question: "3. String values must be enclosed in within ______ when being assigned to variables",
+    choices: ["two slices", "earmuffs", "quotes", "brackets"],
+    answer: "quotes"}
+]
 
 //clicking on answers and check if correct
 // answer1.addEventListener("click", checkAnswer)
@@ -45,11 +50,6 @@ var questionSelect = [
 // click on start button to start time
 startButton.addEventListener("click", startTime);
 
-// startButton.addEventListener("click", startGame){
-//     quizSection.removeAttribute(“class”);
-//     quizSection.setAttribute = "block";
-// }
-
 
 // setting up the timer
 function startTime() {
@@ -62,18 +62,21 @@ function startTime() {
         }
     }, 1000);
 
-    main.setAttribute("class", "hidden");
-    quizSection.removeAttribute("class");
 
-    startGame();
+    main.setAttribute("class", "hidden")
+
+    quizSection.removeAttribute("class", "")
+    
+    startGame()
 }
 
-function startGame(){
+function startGame() {
+
     displayQuestions.textContent = questionSelect [questionIndex].question
-    answer1.textContent = questionSelect [questionIndex].choice[0]
-    answer2.textContent = questionSelect [questionIndex].choice[1]
-    answer3.textContent = questionSelect [questionIndex].choice[2]
-    answer4.textContent = questionSelect [questionIndex].choice[3]
+    answer1.textContent = questionSelect [questionIndex].choices[0]
+    answer2.textContent = questionSelect [questionIndex].choices[1]
+    answer3.textContent = questionSelect [questionIndex].choices[2]
+    answer4.textContent = questionSelect [questionIndex].choices[3]
 
 }
 
