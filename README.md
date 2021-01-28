@@ -1,48 +1,25 @@
 # quiz-challenge
 
-Create repo
-Create HTML
+In this homework we were asked to make a pretty comprehensive coding quiz.
 
-Split When and Thens
+The HTML body is built and links to a css stylesheet and a script javascript doc.
 
-Need HTML with each of these as Divs:
-Need a Start button
-Need a Timer
-Need questions element
-Choices element
-Game Over Screen
+The start button is working and starts the timer and the user is presented with the first question and answer choices. The main code block with the introductioon becomes hidden and the question function appears which lists the code quiz and answers.
 
-Organizing the Javacsript
-//Data on top of doc:
-//Questions
-// Global variables
-//Functions
-//Event Listeners
+The timer and score are visible. The timer is working but the view high score is not.
 
-// click start button
-// ref startBtn on DOM
-//add onclick event
+This part of the homework took quite a big of troubleshooting. I had trouble deciding and then calling classes and ids. Also, using hidden features on my ids.
 
-// start timer
-// ref timerEl on DOM
-//use set interval
+<<<<<< This part of the quiz is not completed. >>>>>
 
-function displayQuestion
-//display question and choices
-//ref the DOM
-//loop thru the questions
-//display questions on DOM
-//loop thru the choices
-//display each choice on DOM
+WHEN I answer a question
+THEN I am presented with another question
 
-functionquestionClick
-//check correctanswer against user choice
-//if answer correct, show next question
-// ????
-// displayQuestion()
-// if incorect, subtract time
-// time = time - 15
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
 
-function e
-// when all questions answered, game over
-// when time reaches 0 game over
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+
+WHEN the game is over
+THEN I can save my initials and my score
