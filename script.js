@@ -6,6 +6,7 @@ var startButton = document.getElementById("start-button");
 var saveButton = document.getElementById("save-button");
 var quizSection = document.getElementById("quiz");
 var displayQuestions = document.getElementById("display-questions");
+var answerLine = document.getElementById("answer-line");
 var answer1 = document.getElementById("answer1");
 var answer2 = document.getElementById("answer2");
 var answer3 = document.getElementById("answer3");
@@ -16,8 +17,8 @@ var main = document.getElementById("main");
 
 var questionIndex = 0;
 var secondsLeft = 30;
-var correct = 0;
-var incorrect = 0;
+var correctAnswer = 0;
+var incorrectAnswer = 0;
 
 //  array of questions
 var questionSelect = [
@@ -37,17 +38,13 @@ var questionSelect = [
     answer: "quotes"}
 ]
 
-//clicking on answers and check if correct
-// answer1.addEventListener("click", checkAnswer)
-// answer2.addEventListener("click", checkAnswer)
-// answer3.addEventListener("click", checkAnswer)
-// answer4.addEventListener("click", checkAnswer)
+
 
 // save user info
 // saveButton.addEventListener("click", saveUser)
 
 
-// click on start button to start time
+// click start button and call startTime function
 startButton.addEventListener("click", startTime);
 
 
@@ -62,14 +59,16 @@ function startTime() {
         }
     }, 1000);
 
-
+    //  hide introduction
     main.setAttribute("class", "hidden")
-
+    // show quiz section
     quizSection.removeAttribute("class", "")
+    quizSection.style.display= "block"
     
     startGame()
 }
 
+// display questions and answers
 function startGame() {
 
     displayQuestions.textContent = questionSelect [questionIndex].question
@@ -80,6 +79,12 @@ function startGame() {
 
 }
 
+// clicking on answers call checkAnswer function
+answer1.addEventListener("click", checkAnswer)
+answer2.addEventListener("click", checkAnswer)
+answer3.addEventListener("click", checkAnswer)
+answer4.addEventListener("click", checkAnswer)
+
 // function displayQuestion
 //display question and choices
 //ref the DOM
@@ -88,8 +93,13 @@ function startGame() {
 //loop thru the choices
 //display each choice on DOM
 
-
 function checkAnswer() {
+
+var userChoice = this.getAttribute("data-value");
+
+
+
+
 
 }
 // functionquestionClick
